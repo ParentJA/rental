@@ -13,3 +13,9 @@ body {
   position: absolute;
   text-align: center;
 }
+
+.media-object {
+  width: 150px;
+  height: 150px;
+  background-color: lightgrey;
+}

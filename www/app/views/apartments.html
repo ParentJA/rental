@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-lg-offset-3 col-lg-6">
+    <ul class="media-list">
+      <li class="media" ng-repeat="apartment in models.apartments">
+        <div class="media-left">
+          <img class="media-object img-rounded" ng-src="{{ apartment._building.photo }}" width="150" height="150"
+               ng-if="apartment._building.photo">
+          <div class="media-object" ng-if="!apartment._building.photo"></div>
+        </div>
+        <div class="media-body">
+          <h3 class="media-heading">{{ apartment._building.name }}</h3>
+          <p>{{ apartment._building.address }}</p>
+          <p>
+            <span>
+              <h4>${{ apartment.rate }}</h4>
+              <ng-pluralize count="numApartments()"
+                            when="{'0': 'No Units', 'one': '1 Unit', 'other': '{} Units'}"></ng-pluralize> |
+              {{ range('num_bedrooms').min }}&ndash;{{ range('num_bedrooms').max }} Beds |
+              {{ range('num_bathrooms').min }}&ndash;{{ range('num_bathrooms').max }} Baths |
+              {{ range('num_rooms').min }}&ndash;{{ range('num_rooms').max }} Rooms
+            </span>
+            <span class="pull-right">{{ apartment._building.phone_number }}</span><br>
+            <a href>View more details</a>
+          </p>
+        </div>
+      </li>
+    </ul>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-__author__ = 'jason.parent@carneylabs.com (Jason Parent)'
+__author__ = 'jason.a.parent@gmail.com (Jason Parent)'
 
 # Django imports...
 from django.conf import settings
@@ -11,5 +11,6 @@ admin.autodiscover()
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='index.html')),
+    url(r'^api/v1/apartments/$', include('apartments.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
