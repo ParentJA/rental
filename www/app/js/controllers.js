@@ -9,8 +9,13 @@
 
   }
 
+  function ApartmentsController($scope) {
+
+  }
+
   angular.module("app")
     .controller("MainController", ["$scope", MainController])
-    .controller("HomeController", ["$scope", HomeController]);
+    .controller("HomeController", ["$scope", HomeController])
+    .controller("ApartmentsController", ["$scope", ApartmentsController]);
 
 })(window, window.angular);

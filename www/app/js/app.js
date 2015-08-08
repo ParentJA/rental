@@ -12,6 +12,11 @@
         url: "/",
         templateUrl: "/static/views/home.html",
         controller: "HomeController"
+      })
+      .state("apartments", {
+        url: "/apartments",
+        templateUrl: "/static/views/apartments.html",
+        controller: "ApartmentsController"
       });
 
     //Default state...
